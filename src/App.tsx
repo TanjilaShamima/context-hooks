@@ -1,14 +1,13 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import useUser from "./context/useUserContext";
 import { UserContext } from "./context/UserContext";
+import MemoCallBack from './components/MemoCallBack'
 
 function App() {
   const { user, setUser, isLoggedIn } = useUser();
   return (
     <UserContext.Provider value={useUser()}>
-      <h1> Hello</h1>
+      <MemoCallBack />
     </UserContext.Provider>
   );
 }
